@@ -5,7 +5,7 @@ function [p,F1,F2,M,Lambda,Gamma]=pressureField(static)
 r=static.r;
 L=static.L;
 m=static.m;
-x1=static.x1;
+x1=static.x1(1:end-1);
 x3=static.x3;
 s=static.s;
 h=static.gap.h;
@@ -48,7 +48,7 @@ C=C;
 
 % Matrix form for the Reynolds equation: Lambda*P=Gamma
 for j=1:m(1)
-    Lambda(j,j) =A(j);%filling the diagonal components of the 'A' matrix
+    Lambda(j,j) =A(1,j);%filling the diagonal components of the 'A' matrix
     %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     %Enter your code here and fill the 'Lambda' and the 'Gamma' matrices 
     
@@ -62,9 +62,10 @@ p=meshgrid(p,x3);
 
 
 %Projections of the resulting force and the torque
+x1=static.x1;%return an extra point with the known pressure value
 for i=1:m(3)
     for j=1:m(1)
-        subF1(i,j)=p(i,j)*cos(x1(j)/r);
+        subF1(i,j)=-p(i,j)*cos(x1(j)/r);
         %!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         %Enter your code here
         %subF2(i,j)=

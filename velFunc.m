@@ -4,7 +4,7 @@ function [u1,u2,du1hdx1] = velFunc(kinem)
 %Initialisation
 r=kinem.r;
 m=kinem.m;
-x1=kinem.x1;
+x1=kinem.x1(1:end-1);
 n_rps=kinem.n_rps;
 h=kinem.gap.h;
 V1=kinem.V1;

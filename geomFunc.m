@@ -4,7 +4,7 @@ function [h,hpow3,dhpow3dx1]=geomFunc(geom)
 %Initialisation
 X1=geom.X1;
 X2=geom.X2;
-x1=geom.x1;
+x1=geom.x1(1:end-1);
 r=geom.r;
 m=geom.m;
 h0=geom.h0;
