@@ -1,5 +1,6 @@
 %The function calculates the double integral using Simpson's formula
-%The integration limits are uniform from 0 to 1
+%The integration limits are uniform from 0 to 1. That's why the result
+%should be multiplied by the values of difference between the limits.
 function [integ]=dblintegral(f)
 %int=0;
 [nx, ny]=size(f);
