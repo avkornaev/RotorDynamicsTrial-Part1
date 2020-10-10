@@ -20,7 +20,7 @@ X1=-(e_r*h0); X2=-sqrt((e_r*h0)^2-X1^2);% initial position of a shaft
 
 m=[9 3 9];% mesh parameters along x1 and x2 axis relatively
 x1=linspace(0,2*pi*r,m(1)+2);% x1 mesh including 1 extra point (0,2pi) 
-x3=linspace(0,L,m(3));% x1 mesh including 1 extra point 
+x3=linspace(0,L,m(3));% x3 mesh
 s=[x1(2)-x1(1) 0 x3(2)-x3(1)];
  %Kinematic parameters
 n_rps=3e+3/60;%shaft speed, rps
