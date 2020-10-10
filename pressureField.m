@@ -81,7 +81,7 @@ for i=1:length(x3)
     end
 end
 F1=dblintegral(subF1)*(2*pi*r*L);%the correct answer is about 0 N    
-F2=dblintegral(subF2)*(2*pi*r*L);%the correct answer is about -10.5 N    
+F2=dblintegral(subF2)*(2*pi*r*L);%the correct answer is about 10.5 N    
 M = dblintegral(subM)*(2*pi*r*L); %the correct answer is about 0.0034 N*m    
 end
 
