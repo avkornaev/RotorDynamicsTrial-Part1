@@ -18,7 +18,7 @@ L=20e-3;% bearing length,m
 e_r=1e-1;% relative eccentricity of a shaft in a bearing,e_r=e/h0,0<=e_r<=1
 X1=-(e_r*h0); X2=-sqrt((e_r*h0)^2-X1^2);% initial position of a shaft
 
-m=[9 3 9];% mesh parameters along x1 and x2 axis relatively
+m=[9 3 9];% mesh parameters along x1, x2 and x3 axis relatively
 x1=linspace(0,2*pi*r,m(1)+2);% x1 mesh including 1 extra point (0,2pi) 
 x3=linspace(0,L,m(3));% x3 mesh
 s=[x1(2)-x1(1) 0 x3(2)-x3(1)];
